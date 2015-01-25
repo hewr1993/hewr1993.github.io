@@ -4,7 +4,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>test | Wayne Ho&#39;s</title>
+  <title>gallery | Wayne Ho&#39;s</title>
+  <link rel="icon" href="/img/arc-reactor.jpg" type="image/x-icon">
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -13,6 +14,31 @@
   <link rel="stylesheet" type="text/css" href="/css/screen.css" />
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
   <meta name="generator" content="Wayne Ho's">
+  <link rel="stylesheet" href="/css/flexslider.css" type="text/css" />
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript">
+	jQuery.noConflict()(function($){
+			$('.slides').each(function() {
+				var height = parseInt($(this).width() * 0.5625);
+				$(this).find('li').each(function() {
+					$(this).css({'height':height+'px'});
+				});
+			});
+			$('.flexslider').flexslider({
+                        
+                        animation : ' fade ',direction : 'horizontal',directionNav : true,reverse : false,slideshowSpeed : 7000,animationSpeed : 600,                        
+                        controlNav: false,
+                        keyboardNav: false,
+                        prevText: "&lt;",
+                        nextText: "&gt;",
+                        touch: true,
+                        
+                    });
+
+		});
+</script>
 
   
   
@@ -45,49 +71,66 @@
 
 <main class="content" role="main">
   <article class="post">
-    <h1 class="post-title">test</h1>
-    <span class="post-meta">
-      <time datetime="2015-01-24T10:39:43.000Z" itemprop="datePublished">
+    
+	<div class="pin-container slider-flexslider">
+		<section class="flexslider">
+			<ul class="slides">
+		
+		  <li style="overflow:hidden"><a href="/img/img-bg1.jpg" target="_blank"><img src="/img/img-bg1.jpg" /></a></li>
+		
+		  <li style="overflow:hidden"><a href="/img/img-bg2.jpg" target="_blank"><img src="/img/img-bg2.jpg" /></a></li>
+		
+			</ul>
+		</section>
+	</div>
+	
+	<div class="post-panel">
+		<h1 class="post-title">gallery</h1>
+		<span class="post-meta">
+	<div class="pin-container">
+	</div>
+      <time datetime="2015-01-25T04:48:41.000Z" itemprop="datePublished">
 		  <i class="fi-clock small"></i>
-          2015 01 24
+          2015 01 25
       </time>
     
 </span>
 
-    <section class="post-content">
-      
-    </section>
-    <footer class="post-footer">
-      <section class="author">
+		<section class="post-content">
+		  
+		</section>
+		<footer class="post-footer">
+		  <section class="author">
     <h4>何蔚然</h4>
     <p>我叫Wayne Ho</p>
 </section>
-      <section class="share">
+		  <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=我叫Wayne Ho ?url=http://blog.wayneho.info/2015/01/24/test/" target="_blank">
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=我叫Wayne Ho ?url=http://blog.wayneho.info/2015/01/25/gallery/" target="_blank">
         <span class="hidden">weibo</span>
     </a>
-    <a class="icon-twitter" href="http://twitter.com/share?url=http://blog.wayneho.info/2015/01/24/test/"
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://blog.wayneho.info/2015/01/25/gallery/"
        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.wayneho.info/2015/01/24/test/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.wayneho.info/2015/01/25/gallery/"
        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://blog.wayneho.info/2015/01/24/test/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://blog.wayneho.info/2015/01/25/gallery/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
 </section>
 
-    </footer>
+		</footer>
+	<div class="post-panel">
   </article>
   <nav class="pagination" role="pagination">
     
     <span class="icon-logo1">•</span>
     
-    <a class="older-posts ease-in-out" href="../hello-world">
+    <a class="older-posts ease-in-out" href="../../24/hello-world">
         Hello World →
     </a>
     
