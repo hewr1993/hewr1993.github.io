@@ -88,9 +88,9 @@
 		<section class="flexslider">
 			<ul class="slides">
 		
-			<li style="overflow:hidden"><a href="/img/imac-dual-screen.jpg" target="_blank"><img src="/img/imac-dual-screen.jpg" /></a></li>
+			<li style="overflow:hidden"><a rel="fancybox" href="/img/imac-dual-screen.jpg" target="_blank"><img src="/img/imac-dual-screen.jpg" /></a></li>
 		
-			<li style="overflow:hidden"><a href="/img/thunderbolt.png" target="_blank"><img src="/img/thunderbolt.png" /></a></li>
+			<li style="overflow:hidden"><a rel="fancybox" href="/img/thunderbolt.png" target="_blank"><img src="/img/thunderbolt.png" /></a></li>
 		
 			</ul>
 		</section>
@@ -100,8 +100,6 @@
 		<header class="post-header">
 			<h2 class="post-title"><a href="/2015/01/26/iMac作第二屏幕/">iMac作第二屏幕</a></h2>
 			<span class="post-meta">
-	<div class="pin-container">
-	</div>
 	<time datetime="2015-01-26T07:36:49.000Z" itemprop="datePublished">
 	<i class="fi-clock small"></i>
 			2015 01 26
@@ -167,6 +165,18 @@
 
 
 
+<link rel="stylesheet" href="/modules/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/modules/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox({
+		//$('.fancybox').fancybox({
+			padding : 0,
+			openEffect  : 'elastic'
+		});
+	});
+</script>
+
 
 
 	</div>
@@ -189,5 +199,35 @@
 </nav>
 
 </div>
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-	<title>iMac作第二屏幕 | Wayne Ho&#39;s</title>
+	<title>A New Measure for Analyzing Personal Networks | Wayne Ho&#39;s</title>
 	<link rel="icon" href="/img/arc-reactor.jpg" type="image/x-icon">
 	<meta name="description" content="" />
 	<meta name="HandheldFriendly" content="True" />
@@ -84,57 +84,74 @@
 <main class="content" role="main">
 	<article class="post">
 		
-	<div class="pin-container slider-flexslider">
-		<section class="flexslider">
-			<ul class="slides">
-		
-			<li style="overflow:hidden"><a rel="gallery" href="/img/imac-dual-screen.jpg"><img src="/img/imac-dual-screen.jpg" /></a></li>
-		
-			<li style="overflow:hidden"><a rel="gallery" href="/img/thunderbolt.png"><img src="/img/thunderbolt.png" /></a></li>
-		
-			</ul>
-		</section>
-	</div>
-	
 	<div class="post-panel">
-		<h1 class="post-title">iMac作第二屏幕</h1>
+		<h1 class="post-title">A New Measure for Analyzing Personal Networks</h1>
 		<span class="post-meta">
-	<time datetime="2015-01-26T07:36:49.000Z" itemprop="datePublished">
+	<time datetime="2015-01-27T19:11:01.000Z" itemprop="datePublished">
 	<i class="fi-clock small"></i>
-			2015 01 26
+			2015 01 28
 	</time>
 	
 	
 		<i class="fi-price-tag small" style="margin-left:10px;"></i>
 	
-	<a href='/tags/Mac/'>Mac</a>,
+	<a href='/tags/paper/'>paper</a>,
 	
-	<a href='/tags/双屏/'>双屏</a>
+	<a href='/tags/facebook/'>facebook</a>
 	
 	
 </span>
 
 		<section class="post-content">
-			<p>虽然<a href="http://news.zol.com.cn/article/364051.html" target="_blank" rel="external">这里</a>提供了iPad作为第二屏幕的做法，但实测效率太低，屏幕也太小，起码满足不了我对大屏的需求。<br>iMac屏幕够大，必要时给Mac Air作为第二屏幕也是不错的选择。这里使用了官方提供的<a href="http://support.apple.com/kb/PH4469" target="_blank" rel="external">Target Display</a>方法。</p>
-<h4 id="步骤">步骤</h4>
-<ol>
-<li>准备双端Thunderbolt接口的电缆（淘宝即可，官方比较贵）</li>
-<li>使用Thunderbolt连接任意两台Mac设备</li>
-<li>假如iMac当作第二屏幕，则在iMac键盘上键入Command(⌘)-F2</li>
-<li>退出TD模式，在键盘上键入同样按键即可</li>
-</ol>
-<h4 id="问题">问题</h4>
-<ol>
-<li><p>进入TD模式后，iMac的外置设备（键盘、鼠标等）不能用了。<br>官方没有说明，我摸索出来的方法如下：</p>
+			<p>This is from <a href="http://www.aaai.org/ocs/index.php/ICWSM/ICWSM11/paper/download/2899/3259" target="_blank" rel="external"><strong>Center of Attention: How Facebook Users Allocate Attention across Friends</strong></a>. </p>
+<h4 id="Notations">Notations</h4>
 <ul>
-<li>iMac上启用<em>Screen Sharing</em>，记录下vnc地址</li>
-<li>Mac Air连接该vnc地址，禁用iMac的<em>Bluetooth</em></li>
-<li>打开Mac Air的<em>Bluetooth</em>，与外置键盘、鼠标等配对</li>
+<li>$n$ individuals, $m_j$ is the number of messages sent by person $i$ to $j$.  </li>
+<li>fraction of $i$’s attention devoting to $j$.<br>$$a_j=\frac{m_j}{m}$$</li>
+<li>$TopK$ means top $K$ contacts with largest $a_j$. <span>$$f_k=\sum_{j \in TopK} a_j $$</span>
+
+</li>
+</ul>
+<h4 id="Knowledges">Knowledges</h4>
+<ul>
+<li>Modalities<ul>
+<li>Communication<ul>
+<li>Messages</li>
+<li>Comments</li>
+<li>Wall Posts</li>
 </ul>
 </li>
-<li><p>TD模式下拔出Thunderbolt，iMac会一直假死。<br>暂时无解，似乎只能长按关机键了。。。</p>
+<li>Viewing<ul>
+<li>Profile Views</li>
+<li>Photo Views</li>
+</ul>
 </li>
-</ol>
+</ul>
+</li>
+</ul>
+<h4 id="Results">Results</h4>
+<ul>
+<li>Distribution of Modalities <img src="http://7u2qpd.com1.z0.glb.clouddn.com/5f893d05053b0ad42c0676ca8335c43df5b845ea-a109efd09ebdb0e9c90c6f5db41a67cc3a8e6ff9.png" alt=""></li>
+<li>Fraction $a_k$ as a function of $k$ <img src="http://7u2qpd.com1.z0.glb.clouddn.com/a9372c6e37090d828f57463ef6b9209795f5c16e-8964e49195fe30a09d118f2f3fabd73e858145af.png" alt=""><ul>
+<li>filter out the outliers (who do not significantly use each modality)</li>
+</ul>
+</li>
+<li>Average fraction of attention devoted to top 15 contacts <img src="http://7u2qpd.com1.z0.glb.clouddn.com/695f6e986ceef428d37398ab221a33e77c835983-18047bbafef6d1d5d82bb0097acfa8df3d8dadb9.png" alt=""></li>
+<li>Average fraction of messages sent to top 15 contacts as a function of network size and activity <img src="http://7u2qpd.com1.z0.glb.clouddn.com/7c948ec680b96f0ddf3cdda904769cd84e89ca73-1ce7cfb320803bc4fae270f3f949603fbeccfe6c.png" alt=""><ul>
+<li>larger network leads to smaller $f_{15}$ while more activity leads to larger $f_{15}$</li>
+</ul>
+</li>
+<li>$f_{15}$ as a function of age <img src="http://7u2qpd.com1.z0.glb.clouddn.com/a941e63a009b05c100cda735895c7d9cf2e864ed-c76c75dab89447898cde0a2b2399982b832d84e1.png" alt=""></li>
+<li>Distribution of attention given to top 5 friends for femailes and males <img src="http://7u2qpd.com1.z0.glb.clouddn.com/00fc4dc94a5b2085a8b13735321306a83f4b2123-6765a3ac18a900cd646876ea1822eaadf3991486.png" alt=""><ul>
+<li>total activity and number of contacts vary significantly with age and gender</li>
+</ul>
+</li>
+<li>$f_5$, fixing genders <ul>
+<li>messages <img src="http://7u2qpd.com1.z0.glb.clouddn.com/2bec9c535c5de490df32dcf28e4d155cab70b9e8-b386af9c2a9c54097fc1ffa2e5f2c71855f51f7b.png" alt=""></li>
+<li>profile views <img src="http://7u2qpd.com1.z0.glb.clouddn.com/ba9aa40d06c58dab0ffbb93ea1764677cbaf3a71-abfc217c1506533f90a4ced9b3b4a23e490c46b7.png" alt=""></li>
+</ul>
+</li>
+</ul>
 
 		</section>
 		<footer class="post-footer">
@@ -144,18 +161,18 @@
 </section>
 			<section class="share">
     <h4>Share this post</h4>
-    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=五道口男子理工技术学院，黑科技爱好者 ?url=http://blog.wayneho.info/2015/01/26/iMac作第二屏幕/" target="_blank">
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=五道口男子理工技术学院，黑科技爱好者 ?url=http://blog.wayneho.info/2015/01/28/New-Measure-for-Analyzing-Personal-Networks/" target="_blank">
         <span class="hidden">weibo</span>
     </a>
-    <a class="icon-twitter" href="http://twitter.com/share?url=http://blog.wayneho.info/2015/01/26/iMac作第二屏幕/"
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://blog.wayneho.info/2015/01/28/New-Measure-for-Analyzing-Personal-Networks/"
        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.wayneho.info/2015/01/26/iMac作第二屏幕/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.wayneho.info/2015/01/28/New-Measure-for-Analyzing-Personal-Networks/"
        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://blog.wayneho.info/2015/01/26/iMac作第二屏幕/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://blog.wayneho.info/2015/01/28/New-Measure-for-Analyzing-Personal-Networks/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
@@ -166,11 +183,15 @@
 	</article>
 	<nav class="pagination" role="pagination">
     
-    <a class="newer-posts ease-in-out" href="../../28/New-Measure-for-Analyzing-Personal-Networks">
-        ← A New Measure for Analyzing Personal Networks
+    <a class="newer-posts ease-in-out" href="../../29/Computer-based-Personality-Judgments-in-Facebook">
+        ← Computer-based Personality Judgments in Facebook
     </a>
     
     <span class="icon-logo1">•</span>
+    
+    <a class="older-posts ease-in-out" href="../../26/iMac作第二屏幕">
+        iMac作第二屏幕 →
+    </a>
     
 </nav>
 
