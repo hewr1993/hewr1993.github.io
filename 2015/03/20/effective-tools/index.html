@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-	<title>新浪微博位置信息抽取 | Wayne Ho&#39;s</title>
+	<title>提升幸福感合集 | Wayne Ho&#39;s</title>
 	<link rel="icon" href="/img/arc-reactor.jpg" type="image/x-icon">
 	<meta name="description" content="" />
 	<meta name="HandheldFriendly" content="True" />
@@ -85,61 +85,29 @@
 	<article class="post">
 		
 	<div class="post-panel">
-		<h1 class="post-title">新浪微博位置信息抽取</h1>
+		<h1 class="post-title">提升幸福感合集</h1>
 		<span class="post-meta">
-	<time datetime="2015-01-29T06:19:46.000Z" itemprop="datePublished">
+	<time datetime="2015-03-20T01:42:39.000Z" itemprop="datePublished">
 	<i class="fi-clock small"></i>
-			2015 01 29
+			2015 03 20
 	</time>
 	
 	
 		<i class="fi-price-tag small" style="margin-left:10px;"></i>
 	
-	<a href='/tags/微博/'>微博</a>,
-	
-	<a href='/tags/信息抽取/'>信息抽取</a>
+	<a href='/tags/effective/'>effective</a>
 	
 	
 </span>
 
 		<section class="post-content">
-			<h4 id="描述">描述</h4>
-<p>2014年开始发微博基本都带位置信息，这里记录一些抽取思路。</p>
-<h4 id="类别">类别</h4>
-<p>以下例子取自新浪微博，如不妥即删。</p>
-<ol>
-<li><u>结尾</u>处“我在:<strong>位置url</strong>”<blockquote>
-<p>看谌龙打球太生气。。。。虽然赢了吧。。。。 我在:<a href="http://t.cn/zWtilMK" target="_blank" rel="external">http://t.cn/zWtilMK</a></p>
-</blockquote>
-</li>
-<li><u>开头</u>处“我在这里: #<strong>位置</strong>#”<blockquote>
-<p>我在这里: #Google# Google真爽啊 吃饭免费 哈哈 <a href="http://t.cn/zOPPcAR" target="_blank" rel="external">http://t.cn/zOPPcAR</a></p>
-</blockquote>
-</li>
-<li><u>开头</u>处“我在<strong>位置</strong>(签到x次): ”，其中签到部分可选<blockquote>
-<p>我在正斗粥面专家(机场店)(签到1次)：吃了烧鹅饭，没饱  <a href="http://t.cn/akb2fI" target="_blank" rel="external">http://t.cn/akb2fI</a></p>
-</blockquote>
-</li>
-<li><u>结尾</u>处“我在#<strong>位置</strong># url”<blockquote>
-<p>等领导开会..开会就要等好久[泪]在隔壁办公室等会儿 我在#沈阳奥林匹克体育中心# <a href="http://t.cn/zOgJMtw" target="_blank" rel="external">http://t.cn/zOgJMtw</a></p>
-</blockquote>
-</li>
-</ol>
-<h4 id="地点名">地点名</h4>
-<ul>
-<li>使用正则表达式解析上述情况，记录位置名称</li>
-<li>对只有url的，访问原url，中间小地图地址包含经纬度信息，lon和lat就是经纬度。<blockquote>
-<p><a href="http://api.place.weibo.cn/XYMapcreate.php?lon=116.401871&amp;lat=39.940853" target="_blank" rel="external">http://api.place.weibo.cn/XYMapcreate.php?lon=116.401871&amp;lat=39.940853</a></p>
-</blockquote>
-</li>
-<li>访问<a href="http://www.gpsspg.com/maps.htm" target="_blank" rel="external">SPG经纬度查询</a>，查询相应经纬度即可得到名称。这里好处在于可以得到<strong>参考名称</strong>而不是<strong>最接近名称</strong>。</li>
-<li>分析上述过程，得到api形式，返回json格式如下<blockquote>
-<p><a href="http://www.gpsspg.com/ajax/maps_get.aspx?lat=39.940853&amp;lng=116.401871&amp;type=0" target="_blank" rel="external">http://www.gpsspg.com/ajax/maps_get.aspx?lat=39.940853&amp;lng=116.401871&amp;type=0</a><br><img src="http://7u2qpd.com1.z0.glb.clouddn.com/2dd048bfc45d1881daecc97f04964e04813242c8-8334b80dd63785b93d3a232031b22320b2c59e4c.png" alt=""></p>
-</blockquote>
-</li>
-</ul>
-<h4 id="服务类型">服务类型</h4>
-<p>尚未解决</p>
+			<h1 id="本文长期更新">本文长期更新</h1>
+<h2 id="建立临时HTTP文件服务器">建立临时HTTP文件服务器</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">python</span> -<span class="keyword">m</span> SimpleHTTPServer <span class="number">8080</span></div></pre></td></tr></table></figure>
+
+<h2 id="vim结构化json">vim结构化json</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:<span class="variable">%!</span><span class="keyword">python</span> -m json.tool</div></pre></td></tr></table></figure>
+
 
 		</section>
 		<footer class="post-footer">
@@ -149,18 +117,18 @@
 </section>
 			<section class="share">
     <h4>Share this post</h4>
-    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=五道口男子理工技术学院，黑科技爱好者 ?url=http://blog.wayneho.info/2015/01/29/新浪微博位置信息抽取/" target="_blank">
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=五道口男子理工技术学院，黑科技爱好者 ?url=http://blog.wayneho.info/2015/03/20/effective-tools/" target="_blank">
         <span class="hidden">weibo</span>
     </a>
-    <a class="icon-twitter" href="http://twitter.com/share?url=http://blog.wayneho.info/2015/01/29/新浪微博位置信息抽取/"
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://blog.wayneho.info/2015/03/20/effective-tools/"
        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.wayneho.info/2015/01/29/新浪微博位置信息抽取/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.wayneho.info/2015/03/20/effective-tools/"
        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://blog.wayneho.info/2015/01/29/新浪微博位置信息抽取/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://blog.wayneho.info/2015/03/20/effective-tools/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
@@ -171,14 +139,10 @@
 	</article>
 	<nav class="pagination" role="pagination">
     
-    <a class="newer-posts ease-in-out" href="../../../03/20/effective-tools">
-        ← 提升幸福感合集
-    </a>
-    
     <span class="icon-logo1">•</span>
     
-    <a class="older-posts ease-in-out" href="../Computer-based-Personality-Judgments-in-Facebook">
-        Computer-based Personality Judgments in Facebook →
+    <a class="older-posts ease-in-out" href="../../../01/29/新浪微博位置信息抽取">
+        新浪微博位置信息抽取 →
     </a>
     
 </nav>
